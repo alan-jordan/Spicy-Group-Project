@@ -11,8 +11,34 @@ This page also contains a create profile button.
 
 
 
-
 Second page:
 Submission page.
 This contains a form that holds an image slot, name slot and Bio slot.
 At the bottom of the page there will be a submission button.
+
+
+Assigned Tasks:
+
+Thomasin - write tests and base HTMl.
+
+Jess and Hannah - file sharing across both pages.
+
+Matt - makes it look good and looks after the shares. Draft profiles of JV and Harrison.
+
+Set hourly alarm to checkin and link ideas together.
+
+COMMIT MESSAGES!!!!
+NEVER PUSH TO MASTER!!!!
+
+STRETCH:
+facebook ads
+proilfe hover effect
+albies profile - boat and prayer and angel.
+uploading images
+users can select a background colour.
+
+BEERS.
+
+
+routes: 
+/, /mural, /submission, /person/1, /person/edit, 
