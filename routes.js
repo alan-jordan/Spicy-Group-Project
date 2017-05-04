@@ -3,6 +3,7 @@ const app = require('./server')
 const router = express.Router()
 const people = require('./people.json')
 const fs = require('fs')
+readFile = require('./filesharing')
 
 
 module.exports = router
