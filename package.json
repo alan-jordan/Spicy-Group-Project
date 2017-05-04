@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --inspect index.js",
     "test": "tape tests/**/*.test.js",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
