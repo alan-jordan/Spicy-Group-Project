@@ -13,10 +13,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/mural', (req, res) => {
-  if(!req.query) {
-    res.render('mural')
+  if(!req.query.id) {
+    res.render('mural', {opacity: 0})
   } else {
-    res.render('mural')
+    res.render('mural', {opacity: 1})
   }
 })
 
