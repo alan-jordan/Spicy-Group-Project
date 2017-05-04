@@ -4,7 +4,7 @@ const router = express.Router()
 const people = require('./people.json')
 const fs = require('fs')
 
-module.exports = router
+
 
 // ----- Routes ----- //
 
@@ -13,7 +13,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/mural', (req, res) => {
-  res.send('im a mural')
+  console.log({people});
+  console.log(people[0]);
+  res.render('people', people)
+  // res.send('im a mural')
 })
 
 router.get('/submission', (req, res) => {
@@ -27,3 +30,5 @@ router.get('/person/:id', (req, res) => { // this may change to query strings
 router.get('/person/:id/edit', (req, res) => { // this may change to query strings
   res.send('im a person editor')
 })
+
+module.exports = router
