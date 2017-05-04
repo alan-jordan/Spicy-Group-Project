@@ -13,36 +13,23 @@ router.get('/', (req, res) => {
 })
 
 router.get('/mural', (req, res) => {
-  if(!req.query.id) {
     res.render('mural', {opacity: 0})
-  } else {
-    res.render('mural', {opacity: 1})
-  }
 })
 
 router.get('/person/:id', (req, res) => { // this may change to query strings
-  res.send('im a person')
   var person = findPeople(req.params.id)
-  res.render('person/edit', person)
+  res.render('mural', person, {opacity: 1})
 })
 
 router.post('/person/:id/edit', (req, res) => { // this may change to query strings
-  res.send('im a person editor')
   console.log(req.body);
   var person = findPeople(req.params.id)
   for(key in req.body )
   console.log(person[key]);
+  res.render('mural', person, {opacity: 1})
 }
 })
 
 findPeople = function(id) {
   return people.find((person) => person.id == id)
 }
-
-
-
-
-
-
-
-
