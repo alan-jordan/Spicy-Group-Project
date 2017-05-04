@@ -2,22 +2,21 @@ body {
   background-color: pink;
   display: flex;
   justify-content: center;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-.person {
+#module {
+  position: absolute;
   text-align: center;
-  width: 50%;
-  height: 50%;
-  background-color: orange;
-  flex-grow: 0;
-  margin: auto;
+  top: 5%;
+  left: 15%;
+  width: 70%;
+  height: 90%;
+  background-color: #fe3d42;
+  box-shadow: 0px 0px 20px #fff;
+  border-radius: 8px;
 }
 
-.hidden {
-  opacity: 0;
-  transition: all 1s linear;
-}
-
-.module {
-  transition: all 1s linear;
+.personcontent {
+  margin: 5%;
 }

@@ -14,15 +14,16 @@ router.get('/', (req, res) => {
 
 router.get('/mural', (req, res) => {
   if(!req.query) {
-    return res.render('mural')
+    res.render('mural')
+  } else {
+    res.render('mural')
   }
-  // else return mural?id=3 ... etc
 })
 
-router.get('/submission', (req, res) => {
-  res.send('im a form')
-})
-
-router.get('/person/:id/edit', (req, res) => { // this may change to query strings
-  res.send('im a person editor')
-})
+// router.get('/submission', (req, res) => {
+//   res.send('im a form')
+// })
+//
+// router.get('/person/:id/edit', (req, res) => { // this may change to query strings
+//   res.send('im a person editor')
+// })
