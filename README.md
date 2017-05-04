@@ -35,6 +35,7 @@ facebook ads
 proilfe hover effect
 albies profile - boat and prayer and angel.
 uploading images
+users can select a background colour.
 
 BEERS.
 
