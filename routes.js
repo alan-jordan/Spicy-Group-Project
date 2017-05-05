@@ -5,7 +5,7 @@ const people = require('./people.json')
 const fileShare = require('./filesharing')
 
 
-module.exports = router
+
 
 // ----- Routes ----- //
 
@@ -14,17 +14,19 @@ router.get('/', (req, res) => {
 })
 
 router.get('/mural', (req, res) => {
-    res.render('mural', {opacity: 0, edit: 0})
+    res.render('people', {opacity: 0, edit: 0})
 })
 
 router.get('/person/:id', (req, res) => { // this may change to query strings
   var person = fileShare.findPerson(req.params.id)
-  res.render('mural', person, {opacity: 1, edit: 0})
+  res.render('people', person, {opacity: 1, edit: 0})
 })
 
 
 
 router.post('/person/:id/edit', (req, res) => { // this may change to query strings
   var person = fileShare.findPerson(req.params.id)
-  res.render('mural', person, {opacity: 1, edit: 1})
+  res.render('people', person, {opacity: 1, edit: 1})
 })
+
+module.exports = router
