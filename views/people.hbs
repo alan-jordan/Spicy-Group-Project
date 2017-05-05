@@ -2,8 +2,8 @@
   {{#each rows}}
     <div class="row">
       {{#each this}}
-        <a href='/mural?id={{id}}' style='background-image: url({{image}})'>
-          {{name}}
+        <a href='/mural?id={{id}}' class='person' style='background-image: url({{image}})'>
+        <div class = 'name'> {{name}} </div>
         </a>
       {{/each}}
     </div>
