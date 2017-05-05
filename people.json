@@ -1,7 +1,6 @@
-
-{ "rows": [
-    [
-      {"id": 1, "name":"JV", "image":"https://www.devacademy.co.nz/wp-content/uploads/2014/07/Joshua_Vial-1.png", "message":"If you haven't heard I own a puppy"},
+[
+  [
+  {"id": 1, "name":"JV", "image":"https://www.devacademy.co.nz/wp-content/uploads/2014/07/Joshua_Vial-1.png", "message":"If you haven't heard I own a puppy"},
       {"id": 2, "name":"Harrison", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"I'm not getting paid for this"},
       {"id": 3, "name":"Jess", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
       {"id": 4, "name":"Thomasin", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
@@ -26,8 +25,7 @@
       {"id": 17, "name":"Kelly", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
       {"id": 18, "name":"Natalie", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
       {"id": 19, "name":"Sarah", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
-      {"id": 20, "name":"Sherly", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"}
-    ],
-    [ {"id": 21, "name":"Albie", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"} ]
+      {"id": 20, "name":"Sherly", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"},
+      {"id": 21, "name":"Albie", "image":"http://theawesomer.com/photos/2010/06/060410_Facebook_profile_pic_t.jpg", "message":"HIHIMEMBER"}
   ]
-}
+]

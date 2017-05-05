@@ -4,19 +4,19 @@ const fs = require('fs')
 
 
 function readPeople() {
-    return fs.readFileSync('../people.json', 'utf8')
+    return JSON.parse(fs.readFileSync(__dirname + '/people.json', 'utf8'))
 }
 
 function findPerson(id) {
   var people = readPeople()
-  return people.find((row) => {
-    var personFound = row.find((person) => {
-      return person["key"] == id
+  var correctRow = people.find((row) => {
+    return row.find((person) => {
+      return person["id"] == id
     })
-    if (personFound["key"] == id) {
-      return true
-    }
   })
+  return correctRow.find((person => {
+    return person["id"] == id
+  }))
 }
 
 module.exports = {

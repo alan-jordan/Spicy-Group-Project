@@ -23,10 +23,8 @@ router.get('/person/:id', (req, res) => { // this may change to query strings
 })
 
 
-})
 
 router.post('/person/:id/edit', (req, res) => { // this may change to query strings
   var person = fileShare.findPerson(req.params.id)
   res.render('mural', person, {opacity: 1, edit: 1})
-}
 })
