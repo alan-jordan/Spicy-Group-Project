@@ -5,28 +5,57 @@ const people = require('./people.json')
 const fileShare = require('./filesharing')
 
 
-
-
 // ----- Routes ----- //
 
 router.get('/', (req, res) => {
   res.redirect('/mural')
 })
 
+router.post('/mural/:id/edit', (req, res) => {
+  var person = fileShare.findPerson(req.params.id)
+  var sentTemplate = {
+    person: person,
+    people: people,
+    opacity: 1,
+    z: 1,
+    view: "none",
+    edit: "block"
+  }
+
+  res.render('people', sentTemplate)
+})
+
+
+router.get('/mural/:id', (req, res) => {
+  var person = fileShare.findPerson(req.params.id)
+
+  var sentTemplate = {
+    person: person,
+    people: people,
+    opacity: 1,
+    z: 1,
+    view: "block",
+    edit: "none"
+  }
+
+  res.render('people', sentTemplate)
+})
+
 router.get('/mural', (req, res) => {
-    res.render('people', {opacity: 0, edit: 0})
-})
+  var sentTemplate = {
+    person: {
+      name: 0,
+      image: 0,
+      message: 0
+    },
+    people: people,
+    opacity: 0,
+    z: -1,
+    view: "block",
+    edit: "none"
+  }
 
-router.get('/person/:id', (req, res) => { // this may change to query strings
-  var person = fileShare.findPerson(req.params.id)
-  res.render('people', person, {opacity: 1, edit: 0})
-})
-
-
-
-router.post('/person/:id/edit', (req, res) => { // this may change to query strings
-  var person = fileShare.findPerson(req.params.id)
-  res.render('people', person, {opacity: 1, edit: 1})
+  res.render('people', sentTemplate)
 })
 
 module.exports = router

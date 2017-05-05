@@ -1,11 +1,28 @@
 <div class="container">
-  {{#each rows}}
+  {{#each people}}
     <div class="row">
       {{#each this}}
-        <a href='/mural?id={{id}}' class='person' style='background-image: url({{image}})'>
-        <div class = 'name'> {{name}} </div>
+        <a href='/mural/{{id}}' class='person' style='background-image: url({{image}})'>
+        <div class='name'>{{name}}</div>
         </a>
       {{/each}}
     </div>
   {{/each}}
+</div>
+<div id="module" style="opacity: {{opacity}}; z-index: {{z}}">
+  <div class="personcontent">
+
+<div class="view" style="display:{{view}}">
+
+  {{person.name}}
+
+</div>
+
+<div class="edit" style="display: {{edit}}">
+
+  form
+  
+</div>
+
+  </div>
 </div>
