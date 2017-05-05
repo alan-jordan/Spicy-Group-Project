@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   res.redirect('/mural')
 })
 
-router.post('/mural/:id/edit', (req, res) => {
+router.get('/mural/:id/edit', (req, res) => {
   var person = fileShare.findPerson(req.params.id)
   var sentTemplate = {
     person: person,

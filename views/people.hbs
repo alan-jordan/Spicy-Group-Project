@@ -11,18 +11,17 @@
 </div>
 <div id="module" style="opacity: {{opacity}}; z-index: {{z}}">
   <div class="personcontent">
-
+      <img src='{{person.image}}'>
+  <h2>{{person.name}}</h2>
 <div class="view" style="display:{{view}}">
-
-  {{person.name}}
-
+  {{person.message}}
+  <a href="/mural/{{person.id}}/edit">edit</a>
 </div>
 
 <div class="edit" style="display: {{edit}}">
-
-  form
-  
+  {{>edit}}
+<a href="/mural/{{person.id}}">Back</a>
 </div>
-
+<a href="/mural">Close Popup</a>
   </div>
 </div>

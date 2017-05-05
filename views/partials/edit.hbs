@@ -1,0 +1,16 @@
+
+<form class="form" action="/mural/{{person.id}}/edit" method="post">
+  <img class="img" src="{{image}}" alt="{{name}}">
+  <label for="name" class="form-item">
+    Image:
+    <input type="" name="Image" value="{{person.image}}">
+  </label>
+<br>
+  <label for="Bio" class="form-item">
+    Message:
+    <textarea type="text" name="Bio" value="{{person.message}}">
+    </textarea>
+  </label>
+
+  <input type="submit" name="" value="Submit">
+</form>
