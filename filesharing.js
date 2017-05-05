@@ -26,7 +26,7 @@ function editPerson (id, newData) {
   for(key in newData){
     person[key] = newData[key]
   }
-  console.log(person);
+   fs.writeFileSync(__dirname + '/people.json', JSON.stringify(people))
 }
 
 
