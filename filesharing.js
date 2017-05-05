@@ -1,14 +1,14 @@
 const fs = require('fs')
+var people = readPeople()
 
-// readfile
 
 
 function readPeople() {
-    return JSON.parse(fs.readFileSync(__dirname + '/people.json', 'utf8'))
+ return JSON.parse(fs.readFileSync(__dirname + '/people.json', 'utf8'))
+
 }
 
 function findPerson(id) {
-  var people = readPeople()
   var correctRow = people.find((row) => {
     return row.find((person) => {
       return person["id"] == id
@@ -19,12 +19,19 @@ function findPerson(id) {
   }))
 }
 
+
+
+function editPerson (id, newData) {
+  var person = findPerson(id)
+  for(key in newData){
+    person[key] = newData[key]
+  }
+  console.log(person);
+}
+
+
 module.exports = {
   readPeople,
+  editPerson,
   findPerson
 }
-// writefile
-// post
-
-
-//an array called people

@@ -32,6 +32,19 @@ test('/ route', (t) => {
 //     })
 // })
 
+test('POST /person/:id/edit', (t) => {
+  request(app)
+    .post('/person/5/edit')
+    .send({name: 'Jeeves'})
+    .end((err, res) => {
+      t.pass()
+      console.log(res.headers.location);
+      console.log(res.status);
+      t.end()
+    })
+})
+
+
 test('File sharing working', (t) => {
   let actual = fileShare.findPerson(5)["name"]
   let expected = "Hannah"

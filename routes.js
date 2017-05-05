@@ -26,7 +26,10 @@ router.get('/person/:id', (req, res) => { // this may change to query strings
 
 router.post('/person/:id/edit', (req, res) => { // this may change to query strings
   var person = fileShare.findPerson(req.params.id)
-  res.render('people', person, {opacity: 1, edit: 1})
+  fileShare.editPerson(req.params.id, req.body)
+  res.send('')
+  res.redirect('/mural')
+  // res.render('people', person, {opacity: 1, edit: 1})
 })
 
 module.exports = router
