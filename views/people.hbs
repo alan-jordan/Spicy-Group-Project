@@ -15,13 +15,14 @@
   <h2>{{person.name}}</h2>
 <div class="view" style="display:{{view}}">
   {{person.message}}
-  <a href="/mural/{{person.id}}/edit">edit</a>
+  <p></p>
+  <a href="/mural/{{person.id}}/edit" class="link">Edit Message</a>
 </div>
 
 <div class="edit" style="display: {{edit}}">
   {{>edit}}
-<a href="/mural/{{person.id}}">Back</a>
+<a href="/mural/{{person.id}}" class="link">Back</a>
 </div>
-<a href="/mural">Close Popup</a>
+<a href="/mural" class="close">X</a>
   </div>
 </div>
