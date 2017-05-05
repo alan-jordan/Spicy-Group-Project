@@ -16,8 +16,7 @@ router.get('/mural/:id/edit', (req, res) => {
   var sentTemplate = {
     person: person,
     people: people,
-    opacity: 1,
-    z: 1,
+    popup: "block",
     view: "none",
     edit: "block"
   }
@@ -32,14 +31,14 @@ router.get('/mural/:id', (req, res) => {
   var sentTemplate = {
     person: person,
     people: people,
-    opacity: 1,
-    z: 1,
+    popup: "block",
     view: "block",
     edit: "none"
   }
 
   res.render('people', sentTemplate)
 })
+
 
 router.get('/mural', (req, res) => {
   var sentTemplate = {
@@ -49,13 +48,18 @@ router.get('/mural', (req, res) => {
       message: 0
     },
     people: people,
-    opacity: 0,
-    z: -1,
-    view: "block",
+    popup: "none",
+    view: "none",
     edit: "none"
   }
 
   res.render('people', sentTemplate)
+})
+
+router.post('/mural/:id/edit', (req, res) => { // this may change to query strings
+  var person = fileShare.findPerson(req.params.id)
+  fileShare.editPerson(req.params.id, req.body)
+  res.redirect('/mural')
 })
 
 module.exports = router

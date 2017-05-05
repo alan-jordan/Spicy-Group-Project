@@ -13,6 +13,26 @@ test('/ route', (t) => {
     })
 })
 
+
+test('POST /person/:id/edit', (t) => {
+  request(app)
+    .post('/person/5/edit')
+    .send({name: 'Jeeves'})
+    .end((err, res) => {
+      t.pass()
+      t.end()
+    })
+})
+
+
+test('File sharing working', (t) => {
+  let actual = fileShare.findPerson(5)["name"]
+  let expected = "Hannah"
+  t.equal(actual, expected, "Find person correct")
+  t.end()
+})
+
+
 test('mural page', (t) => {
   request(app)
     .get('/mural')
@@ -30,11 +50,4 @@ test('mural page', (t) => {
       // ----- //
       t.end()
     })
-})
-
-test('File sharing working', (t) => {
-  let actual = fileShare.findPerson(5)["name"]
-  let expected = "Hannah"
-  t.equal(actual, expected, "Find person correct")
-  t.end()
 })

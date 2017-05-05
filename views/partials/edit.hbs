@@ -1,14 +1,13 @@
-
-<form class="form" action="/mural/{{person.id}}/edit" method="post">
+<form class="form"  method="POST" action="/mural/{{person.id}}/edit">
   <img class="img" src="{{image}}" alt="{{name}}">
   <label for="name" class="form-item">
     Image:
-    <input type="" name="Image" value="{{person.image}}">
+    <input type="" name="image" value="{{person.image}}">
   </label>
 <br>
   <label for="Bio" class="form-item">
-    Message:
-    <textarea type="text" name="Bio" value="{{person.message}}">
+    Message:<br>
+    <textarea type="text" name="message" value="{{person.message}}">
     </textarea>
   </label>
 
