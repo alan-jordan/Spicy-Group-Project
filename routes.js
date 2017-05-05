@@ -13,12 +13,12 @@ router.get('/', (req, res) => {
 })
 
 router.get('/mural', (req, res) => {
-    res.render('mural', {opacity: 0})
+    res.render('mural', {opacity: 0, edit: 0})
 })
 
 router.get('/person/:id', (req, res) => { // this may change to query strings
   var person = findPeople(req.params.id)
-  res.render('mural', person, {opacity: 1})
+  res.render('mural', person, {opacity: 1, edit: 0})
 })
 
 router.post('/person/:id/edit', (req, res) => { // this may change to query strings
@@ -26,7 +26,7 @@ router.post('/person/:id/edit', (req, res) => { // this may change to query stri
   var person = findPeople(req.params.id)
   for(key in req.body )
   console.log(person[key]);
-  res.render('mural', person, {opacity: 1})
+  res.render('mural', person, {opacity: 1, edit: 1})
 }
 })
 
